@@ -6,4 +6,5 @@ This repository includes:
 
  + Analysis code used to obtain results.
  + A fictional example data set.
+ + The code used to simulate the example data set.
  + A script using the example data set to illustrate the mediation analysis approach.
