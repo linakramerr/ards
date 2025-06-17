@@ -4,7 +4,7 @@ Working paper title: "Interleukin-6 is a mediator of therapeutic efficacy in acu
 
 This repository includes:
 
- + Analysis code used to obtain results.
+ + Analysis code used to obtain results. (add as knitted .RMDs)
  + A fictional example data set.
  + The code used to simulate the example data set.
  + A script using the example data set to illustrate the mediation analysis approach.
