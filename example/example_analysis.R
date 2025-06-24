@@ -10,7 +10,7 @@
 ## Joint modeling 
 ################################################################################
 
-data_long <- readRDS("dataexample.rds")
+data_long <- readRDS("exampledata.rds")
 
 library(JMbayes2)
 
@@ -49,6 +49,8 @@ get_effects <- function(jointmodel, coxmodel, intervention){
   
   require(dplyr)
   
+  time_var = jointmodel$model_info$var_names$time_var
+  
   ### for direct 
   # get gamma point estimate
   g_hat = jointmodel$statistics$Mean$gammas
@@ -63,7 +65,7 @@ get_effects <- function(jointmodel, coxmodel, intervention){
   
   ### for indirect
   # get beta
-  b_hat = jointmodel$statistics$Mean$betas1[paste0("day:", intervention)]  
+  b_hat = jointmodel$statistics$Mean$betas1[paste0(time_var, ":", intervention)]  
   # get alpha
   a_hat = jointmodel$statistics$Mean$alphas  
   
@@ -72,7 +74,7 @@ get_effects <- function(jointmodel, coxmodel, intervention){
   
   # obtain MCMC samples of ind
   b_vecs <- lapply(jointmodel$mcmc$betas1, function(mcmc_chain) { # samples beta
-    mcmc_chain[, paste0("day:", intervention)]
+    mcmc_chain[, paste0(time_var, ":", intervention)]
   })
   
   b_samples <- unlist(b_vecs) %>% as.matrix()
