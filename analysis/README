@@ -1,1 +1,5 @@
-This folder inlcudes Rmarkdown code compiled into pdf documents for each analyzed trial data set.
+This folder inlcudes:
+
++ .pdf files: Rmarkdown code compiled into pdf documents for each analyzed trial data set.
++ functions: functions used in the above Rmarkdown documents.
++ figures_script.R: procudes all manuscript figures
