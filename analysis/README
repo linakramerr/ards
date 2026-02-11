@@ -1,5 +1,4 @@
 This folder inlcudes:
 
-- .pdf files: Rmarkdown code compiled into pdf documents for each analyzed trial data set.
-- functions folder: functions.R includes all functions used in the above Rmarkdown documents.
-- figures folder: figures_script.R procudes all manuscript figures
+- Rmarkdown code compiled into .html. Note this is too large to preview and requires download.
+- functions folder: functions.R includes all functions used in the above analysis.
